@@ -1943,7 +1943,7 @@ check_sys_official_bbr() {
 #检查官方xanmod main内核并安装
 check_sys_official_xanmod_main() {
   check_version
-  wget -O check_x86-64_psabi.sh https://dl.xanmod.org/check_x86-64_psabi.sh
+  wget -O check_x86-64_psabi.sh https://dl.wenhao12100.workers.dev/check_x86-64_psabi.sh
   chmod +x check_x86-64_psabi.sh
   cpu_level=$(./check_x86-64_psabi.sh | awk -F 'v' '{print $2}')
   echo -e "CPU supports \033[32m${cpu_level}\033[0m"
@@ -1955,8 +1955,8 @@ check_sys_official_xanmod_main() {
   if [[ "${OS_type}" == "Debian" ]]; then
     apt update
     apt-get install gnupg gnupg2 gnupg1 sudo -y
-    echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list
-    wget -qO - https://dl.xanmod.org/gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -
+    echo 'deb http://deb.wenhao12100.workers.dev releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list
+    wget -qO - https://dl.wenhao12100.workers.dev/gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -
     if [[ "${cpu_level}" == "4" ]]; then
       apt update && apt install linux-xanmod-x64v4 -y
     elif [[ "${cpu_level}" == "3" ]]; then
@@ -1977,7 +1977,7 @@ check_sys_official_xanmod_main() {
 #检查官方xanmod lts内核并安装
 check_sys_official_xanmod_lts() {
   check_version
-  wget -O check_x86-64_psabi.sh https://dl.xanmod.org/check_x86-64_psabi.sh
+  wget -O check_x86-64_psabi.sh https://dl.wenhao12100.workers.dev/check_x86-64_psabi.sh
   chmod +x check_x86-64_psabi.sh
   cpu_level=$(./check_x86-64_psabi.sh | awk -F 'v' '{print $2}')
   echo -e "CPU supports \033[32m${cpu_level}\033[0m"
@@ -1989,8 +1989,8 @@ check_sys_official_xanmod_lts() {
   if [[ "${OS_type}" == "Debian" ]]; then
     apt update
     apt-get install gnupg gnupg2 gnupg1 sudo -y
-    echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list
-    wget -qO - https://dl.xanmod.org/gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -
+    echo 'deb http://deb.wenhao12100.workers.dev releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list
+    wget -qO - https://dl.wenhao12100.workers.dev/gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -
     if [[ "${cpu_level}" == "4" ]]; then
       apt update && apt install linux-xanmod-lts-x64v4 -y
     elif [[ "${cpu_level}" == "3" ]]; then
@@ -2011,7 +2011,7 @@ check_sys_official_xanmod_lts() {
 #检查官方xanmod lts内核并安装
 check_sys_official_xanmod_edge() {
   check_version
-  wget -O check_x86-64_psabi.sh https://dl.xanmod.org/check_x86-64_psabi.sh
+  wget -O check_x86-64_psabi.sh https://dl.wenhao12100.workers.dev/check_x86-64_psabi.sh
   chmod +x check_x86-64_psabi.sh
   cpu_level=$(./check_x86-64_psabi.sh | awk -F 'v' '{print $2}')
   echo -e "CPU supports \033[32m${cpu_level}\033[0m"
@@ -2023,8 +2023,8 @@ check_sys_official_xanmod_edge() {
   if [[ "${OS_type}" == "Debian" ]]; then
     apt update
     apt-get install gnupg gnupg2 gnupg1 sudo -y
-    echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list
-    wget -qO - https://dl.xanmod.org/gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -
+    echo 'deb http://deb.wenhao12100.workers.dev releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list
+    wget -qO - https://dl.wenhao12100.workers.dev/gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -
     if [[ "${cpu_level}" == "4" ]]; then
       apt update && apt install linux-xanmod-edge-x64v4 -y
     elif [[ "${cpu_level}" == "3" ]]; then
